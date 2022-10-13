@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="duocb">
+    <ion-buttons slot="start">
+      <ion-buttons slot="start" >
+        <ion-menu-button menu="first" color="duocy"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title>Lista</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()">
+        <ion-icon slot="icon-only" 
+                  [name]="favorito ? 'heart':'heart-outline' "></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-list class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Asistente</ion-card-subtitle>
+        <ion-card-title>Richard Romero</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        Presente
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-item>
+        <ion-icon name="accessibility-outline" slot="end"></ion-icon>
+        <ion-label>Alexis Moore</ion-label>
+      </ion-item>
+    
+      <ion-card-content>
+        <p>Presente</p>
+      </ion-card-content>
+    </ion-card>
+    
+  </ion-list>
+
+</ion-content>

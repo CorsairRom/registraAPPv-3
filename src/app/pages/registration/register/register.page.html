@@ -1,0 +1,23 @@
+<app-header titulo="Recuperar Contraseña"></app-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="frmRecuperar"> 
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input required formControlName="usuario" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">new password</ion-label>
+      <ion-input required formControlName="usuario" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">new password</ion-label>
+      <ion-input required formControlName="usuario" type="password"></ion-input>
+    </ion-item>
+    <br>
+    <ion-button block color="duocy" type="submit" [disabled]="frmRecuperar.invalid" [routerLink]="['/login']">
+      Recuperar
+    </ion-button>
+  </form>
+
+</ion-content>

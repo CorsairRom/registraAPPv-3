@@ -1,0 +1,84 @@
+<ion-header  >
+  <ion-toolbar color="duocb">
+    <ion-icon color="duocy" slot="start" name="menu" size="large" class="ion-padding" (click)="verMenu()"></ion-icon>
+    <ion-title>INICIO</ion-title>
+    <ion-buttons slot="end" routerLink="/login">
+        <ion-text slot="end" class="ion-text-uppercase">
+          <p>{{username || 'Login'}}</p>
+        </ion-text>
+        <ion-icon slot="end" name="person-circle-outline" class="ion-padding" size="large"></ion-icon>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding" *ngIf="opc" >
+  <ion-text color="duocy" class="ion-text-center">
+    <h1 class="animate__animated animate__backInLeft">Bienvenido</h1>
+  </ion-text>
+  <ion-text color="duocb" class="ion-text-center ion-text-uppercase">
+    <h2 class="animate__animated animate__backInRight">{{username}}</h2>
+  </ion-text>  
+  <br>
+  <br>
+  <ion-text color="duocb" class="ion-text-center">
+    <h1 class="animate__animated animate__headShake">Tus actividades Alumno</h1>
+  </ion-text>
+  
+  <ion-grid fixed class="ion-padding">
+    <ion-row>
+      <ion-col size="4">
+        <ion-avatar class="ion-text-center" routerLink="/scan">
+          <img src="/assets/icon/icons-qr.png"/>
+          <ion-label>Scan</ion-label>
+        </ion-avatar>
+      </ion-col>
+      <ion-col size="4">
+        <ion-avatar class="ion-text-center" routerLink="/listas">
+          <img [src]="['/assets/icon/icons-asistencia.png']" />
+          <ion-label>Lista</ion-label>
+        </ion-avatar>
+      </ion-col>
+      <ion-col size="4">
+        <ion-avatar class="ion-text-center" routerLink="/cursos">
+          <img [src]="['/assets/icon/icons-porcentaje.png']" />
+          <ion-label>Cursos</ion-label>
+        </ion-avatar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-content class="ion-padding ion-text-center" *ngIf="opc==false">
+  <ion-text color="duocy" class="ion-text-center">
+    <h1 class="animate__animated animate__backInLeft">Bienvenido</h1>
+  </ion-text>
+  <ion-text color="duocb" class="ion-text-center ion-text-uppercase">
+    <h2 class="animate__animated animate__backInRight">{{username}}</h2>
+  </ion-text>  
+  <br>
+  <br>
+  <ion-text color="duocb" class="ion-text-center">
+    <h1 class="animate__animated animate__headShake">Tus actividades Profesor</h1>
+  </ion-text>
+  
+  <ion-grid fixed class="ion-padding">
+    <ion-row>
+      <ion-col size="4">
+        <ion-avatar class="ion-text-center" routerLink="/listas">
+          <img [src]="['/assets/icon/icons-asistencia.png']" />
+          <ion-label>Lista</ion-label>
+        </ion-avatar>
+      </ion-col>
+      <ion-col size="4">
+        <ion-avatar class="ion-text-center" routerLink="/asignatura">
+          <img [src]="['/assets/icon/icons-porcentaje.png']" />
+          <ion-label>Cursos profesor</ion-label>
+        </ion-avatar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <br>
+  <br>
+</ion-content>
+

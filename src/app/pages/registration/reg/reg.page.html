@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="duocb">
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Registrate</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form [formGroup]="frmRegistrar" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input required formControlName="nombre" name="nombre" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input required formControlName="password1" name="password1" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Repita password</ion-label>
+      <ion-input required formControlName="password2" name="password2" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input required formControlName="email" name="email" type="email"></ion-input>
+    </ion-item>
+    <br>
+    <ion-button block color="duocy" type="submit" [disabled]="frmRegistrar.invalid">
+      Registrar
+    </ion-button>
+    <ion-button block routerLink="/login" color="duocb">
+      volver
+    </ion-button>
+
+  </form>
+</ion-content>

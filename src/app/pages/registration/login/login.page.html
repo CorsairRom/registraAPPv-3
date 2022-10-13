@@ -1,0 +1,27 @@
+<app-header titulo="Iniciar Sesion">
+
+</app-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="frmlogin" (ngSubmit)="onSubmit()"> 
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input required formControlName="usuario" name="username" type="text" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input required formControlName="password" name="password" type="password" ></ion-input>
+    </ion-item>
+    <br>
+    <ion-button block color="duocy" type="submit" [disabled]="frmlogin.invalid">
+      Iniciar
+    </ion-button>
+    <ion-button routerLink="/register" color="duocb">
+      Recuperar
+    </ion-button>
+    <ion-button routerLink="/reg" color="duocb">
+      Registrar
+    </ion-button>
+  </form>
+  
+</ion-content>

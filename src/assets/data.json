@@ -1,0 +1,33 @@
+{
+    "usuario": {
+      "alumno": [
+        {
+          "nombre": "Richard Romero",
+          "password": "1234",
+          "email": "ric.romero@duocuc.cl"
+        },
+        {
+          "nombre": "alexis Moore",
+          "password": "1234",
+          "email": "ale.moore@duocuc.cl"
+        },
+        {
+          "nombre": "isaac Bravo",
+          "password": "1234",
+          "email": "isa.bravo@duocuc.cl"
+        }
+      ],
+      "profesor": [
+        {
+          "nombre": "alejandro sepulveda",
+          "password": "1234",
+          "email": "ale.sepulveda@profesorduoc.cl"
+        },
+        {
+          "nombre": "walcoldo miranda",
+          "password": " 1234",
+          "email": "waco.mira@duocuc.cl"
+        }
+      ]
+    }
+  }
